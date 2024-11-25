@@ -74,28 +74,34 @@ class Slideshow {
 
   goToSlide(index) {
     this.currentSlide = parseInt(index);
-
+  
     if (this.currentSlide > this.maxSlide) {
       this.currentSlide = 1;
     }
-
+  
     if (this.currentSlide === 0) {
       this.currentSlide = this.maxSlide;
     }
-
+  
     const newCurrent = this.$el.find('.js-slider-home-slide[data-slide="' + this.currentSlide + '"]');
     const newPrev = this.currentSlide === 1 ? this.$el.find('.js-slider-home-slide').last() : newCurrent.prev('.js-slider-home-slide');
     const newNext = this.currentSlide === this.maxSlide ? this.$el.find('.js-slider-home-slide').first() : newCurrent.next('.js-slider-home-slide');
-
+  
+    // Immediately hide all info-overlays
+    this.$el.find('.info-overlay').hide();
+  
     this.$el.find('.js-slider-home-slide').removeClass('is-prev is-next is-current');
     this.$el.find('.js-pagination-item').removeClass('is-current');
-
+  
     if (this.maxSlide > 1) {
       newPrev.addClass('is-prev');
       newNext.addClass('is-next');
     }
-
+  
     newCurrent.addClass('is-current');
+    // Show the new slide's info-overlay
+    newCurrent.find('.info-overlay').show();
+    
     this.$el.find('.js-pagination-item[data-slide="' + this.currentSlide + '"]').addClass('is-current');
   }
 

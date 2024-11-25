@@ -6,7 +6,7 @@ body {
 .info-overlay {
   font-size: 2.5em;
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 5%;
   width: 800px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -68,10 +68,28 @@ body {
 }
 
 @media (min-width: 1600px) {
+  .slideshow__slide-caption-text {
+    padding-top: 33vh !important;
+  }
+
   .info-overlay {
-    font-size: 2em !important;
+    font-size: 1.5em !important;
     top: 30% !important;
     }
+
+  .info-overlay3 {
+    font-size: 1.5em !important;
+    width: 1000px !important;
+    top: 50% !important;
+    }
+
+    .info-overlay2 {
+      font-size: 1.5em !important;
+      width: 1000px !important;
+      top: 50% !important;
+      }
+    
+  
   .container {
     padding-right: 9.5625rem;
     padding-left: 9.5625rem;
@@ -260,7 +278,7 @@ body {
 .slideshow__slide-caption-text {
   position: relative;
   height: 100%;
-  padding-top: 33vh;
+  padding-top: 23vh;
   transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
   transform: translate3d(0, 0, 0);
 }
