@@ -68,7 +68,7 @@ body {
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1000px) {
   .slideshow__slide-caption-text {
     padding-top: 33vh !important;
   }
