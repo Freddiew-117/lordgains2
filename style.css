@@ -8,14 +8,15 @@ body {
   position: absolute;
   top: 40%;
   right: 5%;
-  width: 800px;
-  background-color: rgba(0, 0, 0, 0.7);
+  width: 800px;background: rgb(81,63,105);
+  background: linear-gradient(126deg, rgba(81,63,105,1) 25%, rgba(38,112,81,1) 100%);
   color: white;
   padding: 20px;
   border-radius: 15px;
   z-index: 10;
   animation: float-animation 3s ease-in-out infinite;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 1em;
 }
 
 .pagination {
